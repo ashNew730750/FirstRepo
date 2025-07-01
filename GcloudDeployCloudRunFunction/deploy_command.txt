@@ -1,0 +1,8 @@
+gcloud functions deploy hello-world-service-with-gcloud \
+  --gen2 \
+  --runtime python312 \
+  --region us-central1 \
+  --trigger-http \
+  --entry-point hello_world \
+  --source . \
+  --allow-unauthenticated
