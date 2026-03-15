@@ -6,11 +6,11 @@ from pyspark.sql.functions import col, from_unixtime, to_timestamp
 
 def main():
     # —────────────── CONFIG ─────────────────────────────────────────
-    project      = "mythic-aloe-457912-d5"
+    project      = "project-b0f4dac3-0a4b-47cd-880"
     dataset      = "forecast"
     table        = "weather_data"
     temp_bucket  = "bq-temp-gds"
-    bucket       = "weather-data-gds"
+    bucket       = "weather-data-gds8"
     today        = datetime.date.today().strftime("%Y-%m-%d")
     input_path   = f"gs://{bucket}/weather/{today}/forecast.csv"
 
