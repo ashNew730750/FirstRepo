@@ -26,7 +26,7 @@ with DAG(
     # Submit PySpark job to Dataproc Serverless
     batch_details = {
         "pyspark_batch": {
-            "main_python_file_uri": f"gs://weather-data-gds/script/weather_data_processing.py",
+            "main_python_file_uri": f"gs://weather-data-gds8/script/weather_data_processing.py",
             "python_file_uris": [],
             "jar_file_uris": [],
             "args": []
@@ -36,9 +36,9 @@ with DAG(
         },
         "environment_config": {
             "execution_config": {
-                "service_account": "715970340101-compute@developer.gserviceaccount.com",
-                "network_uri": "projects/mythic-aloe-457912-d5/global/networks/default",
-                "subnetwork_uri": "projects/mythic-aloe-457912-d5/regions/us-central1/subnetworks/default",
+                "service_account": "527551074409-compute@developer.gserviceaccount.com",
+                "network_uri": "projects/project-b0f4dac3-0a4b-47cd-880/global/networks/default",
+                "subnetwork_uri": "projects/project-b0f4dac3-0a4b-47cd-880/regions/us-central1/subnetworks/default",
             }
         },
     }
@@ -47,7 +47,7 @@ with DAG(
         task_id="spark_job_on_dataproc_serverless",
         batch=batch_details,
         batch_id=batch_id,
-        project_id="mythic-aloe-457912-d5",
+        project_id="project-b0f4dac3-0a4b-47cd-880",
         region="us-central1",
         gcp_conn_id="google_cloud_default",
     )
