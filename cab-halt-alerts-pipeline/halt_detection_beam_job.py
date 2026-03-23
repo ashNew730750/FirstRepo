@@ -77,7 +77,7 @@ def run():
     window_period = opts.windowPeriod
 
     # your fixed temp bucket (could also be a VP if you wish)
-    temp_loc = "gs://bq-temp-gds/temp"
+    temp_loc = "gs://bq-temp-gds8/temp"
 
     with beam.Pipeline(options=opts) as p:
         raw = (
