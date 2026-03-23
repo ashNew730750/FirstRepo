@@ -58,7 +58,7 @@ def compute_idle(kv):
     dist = haversine(recs[0], recs[-1])
     if dist == 0:
         return [{
-            "cab_id":       cab_id,
+            "cab_id":       cab_id, 
             "window_start": recs[0]["timestamp"],
             "window_end":   recs[-1]["timestamp"],
             "distance_m":   dist
@@ -77,7 +77,7 @@ def run():
     window_period = opts.windowPeriod
 
     # your fixed temp bucket (could also be a VP if you wish)
-    temp_loc = "gs://bq-temp-gds/temp"
+    temp_loc = "gs://bq-temp-gds8/temp"
 
     with beam.Pipeline(options=opts) as p:
         raw = (

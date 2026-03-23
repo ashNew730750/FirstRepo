@@ -15,4 +15,4 @@ COPY halt_detection_beam_job.py .
 ENV FLEX_TEMPLATE_PYTHON_PY_FILE="/templates/halt_detection_beam_job.py"
 
 # 4) Tell Dataflow to use your image as the SDK container
-ENV FLEX_TEMPLATE_PYTHON_CONTAINER_IMAGE="gcr.io/mythic-aloe-457912-d5/cab-idle:latest"
+ENV FLEX_TEMPLATE_PYTHON_CONTAINER_IMAGE="gcr.io/project-b0f4dac3-0a4b-47cd-880/cab-idle:latest"
