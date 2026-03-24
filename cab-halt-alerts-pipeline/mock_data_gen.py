@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 from google.cloud import pubsub_v1
 
 # ───── CONFIG ────────────────────────────────────────────────────────────
-PROJECT = "mythic-aloe-457912-d5"
+PROJECT = "project-b0f4dac3-0a4b-47cd-880"
 TOPIC   = "cab-telemetry"
 publisher = pubsub_v1.PublisherClient()
 topic_path = publisher.topic_path(PROJECT, TOPIC)
